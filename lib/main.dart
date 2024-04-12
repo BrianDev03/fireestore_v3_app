@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:fireestore_v3_app/view/form_task.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 
@@ -66,6 +67,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context)=> const AddNewTaskScreen())
+        );
           print('Hola');
         },
         tooltip: 'Agragar nueva tarea',
